@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>पिलानी सरकारी अस्पताल</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background: #1e3c72;
+      background: linear-gradient(to right, #2a5298, #1e3c72);
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1e3c72;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e74c3c;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec7c3a8893e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      height: 70vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 2.5rem;
+      z-index: 1;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2a5298;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .schemes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .scheme-card {
+      background-color: #f9fafb;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .scheme-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .article-card {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .article-card h3 {
+      color: #2a5298;
+      margin-bottom: 15px;
+    }
+
+    .article-card p {
+      margin-bottom: 15px;
+    }
+
+    
+
+    footer {
+      background-color: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+
+      .service-card, .scheme-card {
+        width: 90%;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+        <img src="images/logo.jpg" alt="पिलानी सरकारी अस्पताल लोगो" style="width: 100px; height: auto;"/>
+        <div style="text-align: center; flex-grow: 1;">
+            <h1>पिलानी सरकारी अस्पताल</h1>
+            <p>हर नागरिक के लिए विश्वसनीय स्वास्थ्य सेवा</p>
+        </div>
+        <div style="display: flex; gap: 20px;">
+            <div style="text-align: center;">
+                <img src="images/modi.jpg" 
+                     alt="PM Narendra Modi" 
+                     style="width: 80px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                <p style="margin-top: 5px; color: white; font-size: 0.8rem; font-weight: 500;">प्रधानमंत्री<br>नरेंद्र मोदी</p>
+            </div>
+            <div style="text-align: center;">
+                <img src="images/bhajan_lal.jpg" 
+                     alt="Bhajan Lal" 
+                     style="width: 80px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+                <p style="margin-top: 5px; color: white; font-size: 0.8rem; font-weight: 500;">मुख्यमंत्री(राजस्थान)<br>भजन लाल शर्मा</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+  <nav>
+    <a href="#home">होम</a>
+    <a href="#about">हमारे बारे में</a>
+    <a href="#services">सेवाएं</a>
+    <a href="#schemes">राजस्थान सरकार की योजनाएं</a>
+    <a href="#articles">लेख और ब्लॉग</a>
+    <a href="#contact">संपर्क</a>
+    <a href="chatbot.html" style="background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px;">🤖 AI सहायक</a>
+  </nav>
+
+  <div class="hero" id="home" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/sahil.jpg') no-repeat center center/cover; height: 70vh; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+    <marquee behavior="scroll" direction="left" style="color: white; font-size: 20px; font-weight: bold; margin-top: 20px; background-color: rgba(46, 139, 87, 0.8); padding: 10px; border-radius: 5px; width: 100%; z-index: 2;"> 
+      Government Scheme: Ayushman Bharat Yojana - Free healthcare coverage up to ₹5 Lakhs for every citizen. 
+    </marquee>
+    <h2 style="background-color: rgba(30, 60, 114, 0.9); padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); max-width: 800px; margin: 20px auto; color: white; text-align: center; z-index: 2;">हम आपके स्वास्थ्य और कल्याण की देखभाल करते हैं</h2>
+  </div>
+
+  <section id="about">
+    <h2>हमारे अस्पताल के बारे में</h2>
+    <p>पिलानी सरकारी अस्पताल 1985 से पिलानी और आसपास के क्षेत्रों के निवासियों की सेवा कर रहा है। हमारा लक्ष्य सहानुभूति, नवीनता और उत्कृष्टता के साथ उच्च स्तरीय स्वास्थ्य सेवाएं प्रदान करना है।</p>
+  </section>
+
+  <section id="services">
+    <h2>हमारी सेवाएं</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>24x7 आपातकालीन</h3>
+        <p>चौबीसों घंटे आपातकालीन सेवाएं, उन्नत ट्रॉमा केयर और एम्बुलेंस सहायता।</p>
+      </div>
+      <div class="service-card">
+        <h3>नैदानिक जांच</h3>
+        <p>आधुनिक प्रयोगशाला और रेडियोलॉजी सेवाएं जिसमें रक्त परीक्षण, एक्��кс-रे और अल्ट्रासाउंड शामिल हैं।</p>
+      </div>
+      <div class="service-card">
+        <h3>बाह्य रोगी क्लिनिक</h3>
+        <p>जन सेवा के लिए विभिन्न विशेषज्ञताओं के अनुभवी डॉक्टरों के साथ दैनिक ओपीडी।</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schemes">
+    <marquee behavior="scroll" direction="left" style="color: #2e8b57; font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 30px;"> 
+      सरकारी योजना: आयुष्मान भारत योजना - प्रत्येक नागरिक के लिए ₹5 लाख तक का नःशुल्क स्वास्थ्य कवरेज।
+    </marquee>
+    <style>
+      .animated-underline {
+        position: relative;
+        display: inline-block;
+      }
+
+      .animated-underline::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(to right, #e74c3c, #1e3c72);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.5s ease-out;
+        animation: underlineAnimation 2s infinite;
+      }
+
+      @keyframes underlineAnimation {
+        0% {
+          transform: scaleX(0);
+          transform-origin: bottom right;
+        }
+        50% {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+        100% {
+          transform: scaleX(0);
+          transform-origin: bottom right;
+        }
+      }
+    </style>
+    <h2 class="animated-underline">राजस्थान सरकार की योजनाएं</h2>
+    <div class="schemes">
+      <div class="scheme-card">
+        <h3>राजस्थान जन आरोग्य योजना (R-JAY)</h3>
+        <p>यह योजना राजस्थान के निवासियों को मुफ्त स्वास्थ्य बीमा प्रदान करती है। इसमें अस्पताल में भर्ती होने का खर्च, सर्जरी और विभिन्न बीमारियों के लिए चिकित्सा उपचार शामिल हैं।</p>
+      </div>
+      <div class="scheme-card">
+        <h3>मुख्यमंत्रीवी योजना</h3>
+        <p>यह योजना राजस्थान में आर्थिक रूप से कमजहत्तव सेवाओं और सर्जरी के लिए मुफ्त स्वास्थ्य बीमा प्रदान करती है।</p>
+      </div>
+      <div class="scheme-card">
+        <h3>राजश्री योजना</h3>
+        <p>राजश्री योजना राजस्थान में महिलाओं और बच्चों के कल्याण पर केंद्रित है, जो गर्भवती महिलाओं और नवजात शिशुओं के स्वास्त्य के लिए वित्तीय सहायता प्रदान करती है।</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2 class="animated-underline">स्वास्थ्य लेख और जानकारी</h2>
+    <div class="articles">
+      <div class="article-card">
+        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); height: 150px; width: 150px; background-size: cover; background-position: center; border-radius: 10px; margin: 20px auto 0;"></div>
+        <h3>मधुमेह प्रबंधन को समझना</h3>
+        <p>मधुमेह को प्रभावी ढंग से प्रबंधित करने में रक्त शर्करा नियंत्रण, स्वस्थ आहार और नियमित व्यायाम के महत्व के बारे में जानें। हमारे विशेषज्ञों द्वारा प्रमाणित जानकारी और नवीनतम शोध पर आधारित मार्गदर्शन।</p>
+        <div class="article-meta" style="margin: 15px 0; color: #666; font-size: 0.9rem;">
+          <span>📅 अपडेट: जून 2023</span>
+          <span style="margin-left: 15px;">⏱ पढ़ने का समय: 5 मिनट</span>
+        </div>
+        <a href="article1.html" class="read-more">और पढ़ें →</a>
+      </div>
+      
+      <div class="article-card">
+        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1584634731339-252c581abfc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); height: 150px; width: 150px; background-size: cover; background-position: center; border-radius: 10px; margin: 20px auto 0;"></div>
+        <h3>कोविड-19 रोकथाम दिशानिर्देश</h3>
+        <p>कोविड-19 से बचाव के लिए नवीनतम रोकथाम उपायों, टीकाकरण अपडेट और सुरक्षा प्रोटोकॉल के बारे में जानकारी प्राप्त करें। WHO और स्वास्थ्य मंत्रालय के नवीनतम दिशानिर्देशों पर आधारित।</p>
+        <div class="article-meta" style="margin: 15px 0; color: #666; font-size: 0.9rem;">
+          <span>📅 अपडेट: जुलाई 2023</span>
+          <span style="margin-left: 15px;">⏱ पढ़ने का समय: 7 मिनट</span>
+        </div>
+        <a href="article2.html" class="read-more">और पढ़ें →</a>
+      </div>
+      
+      <div class="article-card">
+        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); height: 150px; width: 150px; background-size: cover; background-position: center; border-radius: 10px; margin: 20px auto 0;"></div>
+        <h3>मानसिक स्वास्थ्य जागरूकता</h3>
+        <p>मानसिक स्वास्थ्य के महत्व, तनाव प्रबंधन तकनीकों और उपलब्ध सहायता सेवाओं के बारे में जानें। विशेषज्ञों द्वारा सुझाई गई प्रभावी तकनीकें और दैनिक अभ्यास।</p>
+        <div class="article-meta" style="margin: 15px 0; color: #666; font-size: 0.9rem;">
+          <span>📅 अपडेट: जुलाई 2023</span>
+          <span style="margin-left: 15px;">⏱ पढ़ने का समय: 6 मिनट</span>
+        </div>
+        <a href="article3.html" class="read-more">और पढ़ें →</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+  <style>
+    .article-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .article-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .article-card h3 {
+      color: #2a5298;
+      margin: 20px 25px 15px;
+      font-size: 1.4rem;
+    }
+
+    .article-card p {
+      margin: 0 25px 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .article-card .read-more {
+      display: inline-block;
+      margin: 0 25px 25px;
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .article-card .read-more:hover {
+      transform: translateX(5px);
+    }
+  </style>
+</body>
+</html>
+
+  <style>
+    .article-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .article-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .article-card h3 {
+      color: #2a5298;
+      margin: 20px 25px 15px;
+      font-size: 1.4rem;
+    }
+
+    .article-card p {
+      margin: 0 25px 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .article-card .read-more {
+      display: inline-block;
+      margin: 0 25px 25px;
+      color: #e74c3c;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .article-card .read-more:hover {
+      transform: translateX(5px);
+    }
+  </style>
+
+  <style>
+    .filter-btn {
+      background: #f4f8fb;
+      border: 2px solid #1e3c72;
+      color: #1e3c72;
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .filter-btn.active {
+      background: #1e3c72;
+      color: white;
+    }
+
+    .filter-btn:hover {
+      background: #2a5298;
+      color: white;
+    }
+
+    .article-tag {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const articles = document.querySelectorAll('.article-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          articles.forEach(article => {
+            if (filterValue === 'all' || article.getAttribute('data-type') === filterValue) {
+              article.style.display = 'block';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+  </section>
+
+  <section id="contact" style="background-color: #f9fafb; padding: 60px 20px; margin-top: 40px;">
+    <h2 class="animated-underline">संपर्क करें</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: start; margin-top: 30px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+      <div style="flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h3 style="color: #2a5298; margin-bottom: 25px; font-size: 1.5rem;">संपर्क जानकारी</h3>
+        
+        <div style="margin-bottom: 30px;">
+          <h4 style="color: #1e3c72; margin-bottom: 15px;">आपातकालीन सेवाएं</h4>
+          <p style="margin-bottom: 10px;"><strong>🚑 एम्बुलेंस:</strong> 108</p>
+          <p style="margin-bottom: 10px;"><strong>🏥 आपातकालीन कक्ष:</strong> 01596-242154</p>
+          <p style="margin-bottom: 10px;"><strong>⚡ ट्रॉमा सेंटर:</strong> 01596-242155</p>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+          <h4 style="color: #1e3c72; margin-bottom: 15px;">ओपीडी समय</h4>
+          <p style="margin-bottom: 10px;"><strong>⏰ सामान्य ओपीडी:</strong> सुबह 9:00 बजे से दोपहर 2:00 बजे तक</p>
+          <p style="margin-bottom: 10px;"><strong>🦷 दंत चिकित्सा:</strong> सुबह 9:00 बजे से दोपहर 1:00 बजे तक</p>
+          <p style="margin-bottom: 10px;"><strong>👶 शिशु रोग विभाग:</strong> सुबह 9:00 बजे से दोपहर 2:00 बजे तक</p>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+          <h4 style="color: #1e3c72; margin-bottom: 15px;">महत्वपूर्ण विभाग</h4>
+          <p style="margin-bottom: 10px;"><strong>👨‍⚕️ सामान्य चिकित्सा:</strong> 01596-242156</p>
+          <p style="margin-bottom: 10px;"><strong>💊 फार्मेसी:</strong> 01596-242157</p>
+          <p style="margin-bottom: 10px;"><strong>🔬 पैथोलॉजी लैब:</strong> 01596-242158</p>
+          <p style="margin-bottom: 10px;"><strong>📋 रजिस्ट्रेशन डेस्क:</strong> 01596-242159</p>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+          <h4 style="color: #1e3c72; margin-bottom: 15px;">संपर्क माध्यम</h4>
+          <p style="margin-bottom: 10px;"><strong>📧 ईमेल:</strong> pilani.hospital@rajasthan.gov.in</p>
+          <p style="margin-bottom: 10px;"><strong>🌐 वेबसाइट:</strong> www.pilanighospital.rajasthan.gov.in</p>
+          <p style="margin-bottom: 10px;"><strong>📍 पता:</strong> पिलानी सरकारी अस्पताल, पिलानी, झुंझुनू, राजस्थान - 333031</p>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+          <h4 style="color: #1e3c72; margin-bottom: 15px;">सोशल मीडिया</h4>
+          <div style="display: flex; gap: 15px;">
+            <a href="#" style="color: #1e3c72; text-decoration: none; padding: 8px 15px; border: 1px solid #1e3c72; border-radius: 5px; transition: all 0.3s;">Facebook</a>
+            <a href="#" style="color: #1e3c72; text-decoration: none; padding: 8px 15px; border: 1px solid #1e3c72; border-radius: 5px; transition: all 0.3s;">Twitter</a>
+            <a href="#" style="color: #1e3c72; text-decoration: none; padding: 8px 15px; border: 1px solid #1e3c72; border-radius: 5px; transition: all 0.3s;">Instagram</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="flex: 1; min-width: 300px; height: 400px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.576633211875!2d75.60357731501727!3d28.367772982514825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391416f7fc7c8e89%3A0x5ea4e0be2147cce4!2sPilani%20Government%20Hospital!5e0!3m2!1sen!2sin!4v1679900000000!5m2!1sen!2sin"
+          width="100%" 
+          height="100%" 
+          style="border: 0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2023 पिलानी सरकारी अस्पताल. सर्वाधिकार सुरक्षित.</p>
+  </footer>
+
+</body>
+</html>
+
+  <section id="map" style="margin-top: 40px; padding: 0;">
+    <h2 class="animated-underline" style="margin-bottom: 30px;">हमारा स्थान</h2>
+    <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.3032811655483!2d75.60357661506165!3d28.367739982517825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912746888af3c21%3A0x8df615aa442a1c78!2sPilani%20Government%20Hospital!5e0!3m2!1sen!2sin!4v1679900000000!5m2!1sen!2sin" 
+        width="100%" 
+        height="450" 
+        style="border:0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    
+    <div style="margin-top: 30px; text-align: center;">
+      <h3 style="color: #2a5298; margin-bottom: 15px;">पता</h3>
+      <p style="font-size: 1.1rem; color: #555;">
+        पिलानी सरकारी अस्पताल<br>
+        पिलानी - 333031<br>
+        झुंझुनू, राजस्थान
+      </p>
+      <a href="https://goo.gl/maps/YOUR-MAPS-LINK" 
+         target="_blank" 
+         style="display: inline-block; margin-top: 15px; padding: 10px 20px; background: #1e3c72; color: white; text-decoration: none; border-radius: 5px; transition: background 0.3s;">
+        Google Maps पर देखें
+      </a>
+    </div>
+  </section>
+</body>
+</html>
